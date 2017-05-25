@@ -1,0 +1,28 @@
+{
+  "name": "socket-node",
+  "version": "1.0.0",
+  "description": "A websocket experiment",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staffandevcode/socket-node.git"
+  },
+  "keywords": [
+    "nodejs",
+    "websocket",
+    "realtime"
+  ],
+  "author": "Staffan Frisk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/staffandevcode/socket-node/issues"
+  },
+  "homepage": "https://github.com/staffandevcode/socket-node#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "socket.io": "^2.0.1"
+  }
+}
