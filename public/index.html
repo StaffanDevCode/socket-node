@@ -1,0 +1,13 @@
+<html>
+<body>
+<h1>Hello worlds!</h1>
+<script src=" https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+<script>
+  var socket = io('http://localhost:3030');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
+</body>
+</html>
