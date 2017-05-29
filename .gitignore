@@ -3,3 +3,6 @@
 
 #IMPORTS
 node_modules
+
+# GENERATED FILES
+bundle.js
