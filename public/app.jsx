@@ -2,6 +2,10 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const main = require('./main')();
 
+const req = require('superagent');
+
+main.initConnection();
+
 var MessageBox = React.createClass({
   render: function(){
     var name = this.props.name;
@@ -17,6 +21,7 @@ var FormInput = React.createClass({
       var name = this.refs.name.value;
       this.refs.name.value = '';
       this.props.onNewName(name);
+      main.getSocket.emit('name', {hello: 'from '+name});
     }
     if(this.refs.message.value.length>0) {
       var message = this.refs.message.value;

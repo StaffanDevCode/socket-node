@@ -11,8 +11,11 @@ app.get(basePath, function(req, res){
 app.use(express.static('public'));
 
 io.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
+  socket.emit('news', { hello: 'from server' });
   socket.on('my other event', function (data) {
+    console.log(data);
+  });
+  socket.on('name', function (data) {
     console.log(data);
   });
 });
