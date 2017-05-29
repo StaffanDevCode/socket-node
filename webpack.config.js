@@ -14,6 +14,18 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
+      },
+      {
+        test: /(\.md|\.map)$/,
+        loader: 'null'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
+      },
+      {
+        test: /\.js$/,
+        loader: "transform-loader?brfs"
       }
     ]
   }
